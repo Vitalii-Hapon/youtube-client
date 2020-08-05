@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthorizationPageComponent } from './authorization-page.component';
+import { CardFormComponent } from './card-form.component';
 
-describe('AuthorizationPageComponent', () => {
-  let component: AuthorizationPageComponent;
-  let fixture: ComponentFixture<AuthorizationPageComponent>;
+describe('CardFormComponent', () => {
+  let component: CardFormComponent;
+  let fixture: ComponentFixture<CardFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthorizationPageComponent ]
+      declarations: [ CardFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthorizationPageComponent);
+    fixture = TestBed.createComponent(CardFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
