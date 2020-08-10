@@ -13,11 +13,11 @@ path: '', component: MainLayoutComponent,
   children: [
     { path: '', redirectTo: '/', pathMatch: 'full'},
     { path: '', component: ListPageComponent},
-    { path: '/register', component: RegistrationPageComponent},
-    { path: '/login', component: LoginPageComponent},
-    { path: '/create', component: CreateItemPageComponent},
-    { path: '/:id', component: ItemPageComponent},
-    { path: '/:id/edit', component: EditItemPageComponent},
+    { path: 'register', component: RegistrationPageComponent},
+    { path: 'login', component: LoginPageComponent},
+    { path: 'create', component: CreateItemPageComponent},
+    { path: ':id', component: ItemPageComponent},
+    { path: ':id/edit', component: EditItemPageComponent},
   ]
 
 }];

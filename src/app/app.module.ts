@@ -18,6 +18,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 import { LoginPageComponent } from './core/pages/login-page/login-page.component';
 import { CardColorDirective } from './shared/directives/card-color.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialsModule} from './core/modules/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
