@@ -11,7 +11,6 @@ import { ItemPageComponent } from './core/pages/item-page/item-page.component';
 import { ListPageComponent } from './core/pages/list-page/list-page.component';
 import { SearchPipe } from './shared/pipes/search.pipe';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { SearchNavComponent } from './shared/components/search-nav/search-nav.component';
 import { ItemCardComponent } from './shared/components/item-card/item-card.component';
 import { CardFormComponent } from './shared/components/card-form/card-form.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
@@ -31,7 +30,6 @@ import {MaterialsModule} from './core/modules/materials/materials.module';
     ListPageComponent,
     SearchPipe,
     HeaderComponent,
-    SearchNavComponent,
     ItemCardComponent,
     CardFormComponent,
     NotFoundComponent,

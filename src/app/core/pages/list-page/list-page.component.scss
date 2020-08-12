@@ -1,0 +1,15 @@
+.mat-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 75rem;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+.mat-list-item {
+  margin-top: 1.875rem;
+  width: auto;
+  height: auto;
+}

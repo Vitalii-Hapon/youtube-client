@@ -5,6 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 const materials: object[] = [
   MatButtonModule,
@@ -13,6 +14,7 @@ const materials: object[] = [
   MatInputModule,
   MatIconModule,
   MatListModule,
+  MatCardModule,
 ];
 
 @NgModule({
