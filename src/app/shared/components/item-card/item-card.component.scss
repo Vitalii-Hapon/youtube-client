@@ -4,13 +4,23 @@
 
 .mat-card {
   padding: 1.25rem 1.25rem 0.9375rem 1.25rem;
+  width: auto;
 }
 
-.mat-card-content {
+img {
   width: 223px;
   height: 123px;
   background-image: url("../../../../img/icons/caption.png");
   margin: 0;
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.mat-card-title {
+  margin-bottom: 4.125rem;
+  text-align: end;
+  padding: 0 0.75rem;
 }
 
 .mat-card-actions {
@@ -27,9 +37,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
 
     &:hover {
       box-shadow: 1px -1px 3px 1px rgba(47, 128, 237, 0.5);
+    }
+    
+    &:active {
+      background-color: var(--light-blue);
     }
   }
 
@@ -38,48 +55,7 @@
   }
 }
 
-.mat-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 100%;
-  padding: 1.3125rem 0.875rem;
-
-  .mat-list-item {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-    height: auto;
-    width: auto;
-  }
-}
-
-
-.statistic__icon {
-  background-image: url("../../../../img/icons/css_sprites.png");
-}
-
-.statistic__counter {
-  margin-left: 0.1875rem;
-}
-
-@each $name, $w, $h, $x, $y in (views, 20px, 13px, -90px, -85px),
-  (likes, 15px, 13px, -150px, -79px),
-  (dislikes, 15px, 13px, -150px, -46px),
-  (comments, 13px, 13px, -10px, -129px) {
-  .#{$name} {
-    width: $w;
-    height: $h;
-    background-position: $x $y;
-  }
-}
-
-.mat-card-title {
-  margin-bottom: 4.125rem;
-  text-align: end;
-  padding: 0 0.75rem;
-}
-
-.mat-card-footer {
+.footer-line {
   height: 5px;
   width: 263px;
   margin: 0.625rem -1.25rem -0.9375rem -1.25rem;

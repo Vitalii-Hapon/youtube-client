@@ -1,4 +1,4 @@
-.mat-toolbar, .sort__item__btn, .mat-list, .mat-list-item, .mat-list-item-content  {
+.mat-toolbar, .sort__item__btn, .mat-list, .mat-list-item, .mat-list-item-content {
   font-size: 0.75rem;
   line-height: 0.875rem;
   padding: 0;
@@ -59,6 +59,7 @@
 
   &:active {
     box-shadow: none;
+    background-color: var(--light-blue);
   }
 }
 
@@ -75,6 +76,7 @@
 
   &:hover {
     box-shadow: 1px -1px 3px 1px rgba(47, 128, 237, 0.5);
+    background-color: var(--light-blue);
   }
 
   &:active {
