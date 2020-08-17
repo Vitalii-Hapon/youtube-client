@@ -13,9 +13,12 @@ html, body {
   --primary-white: #ffffff;
   --primary-black: #000000;
   --primary-gray: #e5e5e5;
+  --secondary-gray: #f2f2f2;
+  --dark-grey: #e0e0e0;
   --light-gray: #efefef;
   --text-gray: #929292;
   --text-dark-gray: #4f4f4f;
+  --red-color: #EB5757
 }
 
 .background--grey {
@@ -27,37 +30,42 @@ html, body {
   color: var(--primary-white);
 }
 
+.background--secondary-grey {
+  background-color: var(--secondary-gray);
+}
+
+
 .mat-list-item-content {
   padding: 0 !important;
 }
 
 .mat-card-header-text {
   display: flex;
-  margin: 0!important;
+  margin: 0 !important;
   width: 100%;
   justify-content: space-between;
   align-items: baseline;
 
   .mat-card-title {
-    margin: 0!important;
+    margin: 0 !important;
   }
 
   .mat-card-subtitle {
-    margin: 0!important;
+    margin: 0 !important;
   }
 }
 
 .statistics {
-  display: flex!important;
+  display: flex !important;
   justify-content: space-between;
   margin: 0 auto;
   width: 12.625rem;
-  padding: 1.3125rem 0.625rem!important;
+  padding: 1.3125rem 0.625rem !important;
 
   .mat-list-item {
     font-size: 0.625rem;
     line-height: 0.75rem;
-    height: auto!important;
+    height: auto !important;
     width: auto;
   }
 }
@@ -80,3 +88,21 @@ html, body {
     background-position: $x $y;
   }
 }
+
+.mat-form-field-underline {
+  display: none !important;
+}
+
+.mat-form-field-infix {
+  border: none;
+  padding: 0 !important;
+}
+
+.mat-form-field-wrapper {
+  padding: 0 !important;
+  margin-bottom: 0.75rem;
+}
+
+
+
+
