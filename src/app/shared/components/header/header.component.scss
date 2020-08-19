@@ -110,7 +110,14 @@
 }
 
 .toolbar__bottom {
+  height: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.toolbar__bottom.visible {
   height: 3.125rem;
+  visibility: visible;
 }
 
 .toolbar__nav--sorting-nav {

@@ -11,7 +11,7 @@
       <button class="background--blue search__btn">search</button>
     </div>
 
-    <button class="background--blue settings__btn">
+    <button class="background--blue settings__btn" (click)="toggleSettings()">
       <div class="settings__btn--icon"></div>
     </button>
   </nav>
@@ -22,7 +22,7 @@
   <div class="user__ava"></div>
 </div>
 
-<mat-toolbar class="background--grey toolbar__bottom">
+<mat-toolbar class="background--grey toolbar__bottom" [ngClass]="{visible: settingsVisible}">
   <nav class="toolbar__nav toolbar__nav--sorting-nav">
     <div class="sort__title">Sorting by:</div>
 

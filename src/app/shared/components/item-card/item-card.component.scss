@@ -18,9 +18,11 @@ img {
 }
 
 .mat-card-title {
-  margin-bottom: 4.125rem;
+  height: 4.5625rem;
   text-align: end;
-  padding: 0 0.75rem;
+  width: 223px;
+  //text-overflow: clip;
+  //padding: 0 0.75rem;
 }
 
 .mat-card-actions {

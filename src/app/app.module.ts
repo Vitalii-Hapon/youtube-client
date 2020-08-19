@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './core/modules/materials/materials.module';
 import { LoginPageComponent } from './core/pages/login-page/login-page.component';
 import { NotfoundPageComponent } from './core/pages/notfound-page/notfound-page.component';
+import { CounterPipe } from './shared/pipes/counter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NotfoundPageComponent } from './core/pages/notfound-page/notfound-page.
     SearchPipe,
     CardColorDirective,
     LoginPageComponent,
-    NotfoundPageComponent
+    NotfoundPageComponent,
+    CounterPipe
   ],
   imports: [
     BrowserModule,
