@@ -11,6 +11,7 @@ export interface Isnippet {
   tags: string[];
   categoryId: string;
   liveBroadcastContent: string;
+  defaultLanguage?: string;
   localized: {
     title: string;
     description: string;

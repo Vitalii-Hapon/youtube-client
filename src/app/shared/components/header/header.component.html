@@ -1,51 +1,67 @@
 <mat-toolbar class="background--grey toolbar__top">
 
   <nav class="toolbar__nav">
-    <a class="main-logo" routerLink="/"></a>
+    <a class="main-logo"
+       routerLink="/">
+    </a>
 
     <div class="search__wrapper">
       <input type="text"
              placeholder="What are you want to find out?"
              class="search__input">
 
-      <button class="background--blue search__btn">search</button>
+      <button class="background--blue search__btn">
+        search
+      </button>
     </div>
 
-    <button class="background--blue settings__btn" (click)="toggleSettings()">
+    <button class="background--blue settings__btn"
+            (click)="toggleSettings()">
       <div class="settings__btn--icon"></div>
     </button>
   </nav>
 </mat-toolbar>
 
 <div class="user-block">
-  <div class="user__name">user</div>
+  <div class="user__name">
+    user
+  </div>
   <div class="user__ava"></div>
 </div>
 
-<mat-toolbar class="background--grey toolbar__bottom" [ngClass]="{visible: settingsVisible}">
+<mat-toolbar class="background--grey toolbar__bottom"
+             [ngClass]="{visible: settingsVisible}">
   <nav class="toolbar__nav toolbar__nav--sorting-nav">
-    <div class="sort__title">Sorting by:</div>
+    <div class="sort__title">
+      Sorting by:
+    </div>
 
     <mat-list class="sort__list">
       <mat-list-item class="sort__item">
-        <button mat-flat-button class="sort__item__btn">
-          <span>date</span>
-          <mat-icon>keyboard_arrow_down</mat-icon>
+        <button mat-flat-button
+                class="sort__item__btn"
+                (click)="changeDateSortingState()">
+          <span>
+            date
+          </span>
 
-          <ng-template>
-            <mat-icon>keyboard_arrow_down</mat-icon>
-          </ng-template>
+          <mat-icon>
+            {{dateSortingState()}}
+          </mat-icon>
         </button>
       </mat-list-item>
 
       <mat-list-item class="sort__item">
-        <button  mat-flat-button class="sort__item__btn">
-          <span>count of views</span>
-          <mat-icon>keyboard_arrow_down</mat-icon>
+        <button mat-flat-button
+                class="sort__item__btn"
+                (click)="changeViewsSortingState()">
 
-          <ng-template>
-            <mat-icon>keyboard_arrow_down</mat-icon>
-          </ng-template>
+          <span>
+            count of views
+          </span>
+          <mat-icon>
+            {{viewsSortingState()}}
+          </mat-icon>
         </button>
       </mat-list-item>
 

@@ -10,10 +10,10 @@ export class CounterPipe implements PipeTransform {
       return (+value / n).toFixed(1);
     }
     if (counter.length >= 6) {
-     return round(counter, 1000000) + 'К';
+     return round(counter, 1000000) + ' M';
     } else {
       if (counter.length > 3) {
-        return round(counter, 1000) + 'К';
+        return round(counter, 1000) + ' К';
       } else {
         return counter;
       }

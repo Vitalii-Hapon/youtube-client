@@ -10,7 +10,7 @@
 img {
   width: 223px;
   height: 123px;
-  background-image: url("../../../../img/icons/caption.png");
+  background-image: url("~src/img/icons/caption.png");
   margin: 0;
   &:first-child {
     margin: 0;
@@ -21,8 +21,6 @@ img {
   height: 4.5625rem;
   text-align: end;
   width: 223px;
-  //text-overflow: clip;
-  //padding: 0 0.75rem;
 }
 
 .mat-card-actions {
@@ -64,5 +62,6 @@ img {
   margin: 0.625rem -1.25rem -0.9375rem -1.25rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: var(--primary-blue);
 }
 
