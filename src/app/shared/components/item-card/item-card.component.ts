@@ -8,7 +8,9 @@ import {Iitem} from '../../models/item';
            })
 
 export class ItemCardComponent implements OnInit {
+
   @Input() public item: Iitem;
+  public date: Date = new Date();
 
   constructor() {
   }
@@ -16,4 +18,8 @@ export class ItemCardComponent implements OnInit {
   public ngOnInit(): void {
   }
 
+  public getPeriod(): number {
+    const publishedDate: Date = new Date(this.item.snippet.publishedAt);
+    return Math.round((+this.date - +publishedDate) / 3600000 / 24);
+  }
 }

@@ -6,17 +6,14 @@ import {Component, OnInit} from '@angular/core';
              styleUrls: ['./header.component.scss']
            })
 export class HeaderComponent implements OnInit {
-  private settingsVisible: boolean = false;
   private viewsSorting: boolean = true;
   private dateSorting: boolean = true;
-  private date: Date = new Date();
-  private anotherDate: Date = new Date('2019-09-16T16:53:41.000Z');
+  public settingsVisible: boolean = false;
 
   constructor() {
   }
 
   public ngOnInit(): void {
-    console.log(Math.round((+this.date - +this.anotherDate) / 3600000 / 24));
   }
 
   public toggleSettings(): void {
