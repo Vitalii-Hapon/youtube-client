@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 
 @Component({
              selector: 'app-main-layout',
@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
              styleUrls: ['./main-layout.component.scss']
            })
 export class MainLayoutComponent implements OnInit {
-
+@Output() public list: string = '111';
   constructor() {
   }
 

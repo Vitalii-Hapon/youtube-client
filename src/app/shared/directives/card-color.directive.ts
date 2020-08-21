@@ -10,12 +10,18 @@ export class CardColorDirective implements OnInit {
   }
 
   public ngOnInit(): void {
-    if (this.datePeriod < 7) {
-      this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-blue)';
-    } else if (this.datePeriod < 31) {
-      this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-green)';
-    } else {
-      this.elementRef.nativeElement.style.backgroundColor = 'var(--red-color)';
+    switch (true) {
+      case this.datePeriod < 7 :
+        this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-blue)';
+        break;
+      case this.datePeriod < 31 :
+        this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-green)';
+        break;
+      case this.datePeriod < 183 :
+        this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-yellow)';
+        break;
+      default:
+        this.elementRef.nativeElement.style.backgroundColor = 'var(--red-color)';
     }
   }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ItemsService} from '../../../shared/services/items.service';
 import {Iitem} from '../../../shared/models/item';
 
@@ -8,6 +8,7 @@ import {Iitem} from '../../../shared/models/item';
              styleUrls: ['./list-page.component.scss']
            })
 export class ListPageComponent implements OnInit {
+  @Input() public list: string;
   public items: Iitem[] = [];
 
   constructor(private itemsService: ItemsService) {
@@ -15,6 +16,7 @@ export class ListPageComponent implements OnInit {
 
   public ngOnInit(): void {
     this.items = this.itemsService.getItems();
+    console.log(this.list);
   }
 
 }
