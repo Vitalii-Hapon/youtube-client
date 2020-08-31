@@ -3,44 +3,9 @@
   <img mat-card-image
        [src]="item.snippet.thumbnails.medium.url">
 
-  <mat-card-title-group>
-
-    <mat-list class="statistics">
-
-      <mat-list-item class="statistics__item">
-        <div class="statistic__icon views"></div>
-
-        <div class="statistic__counter">
-          {{item.statistics.viewCount | counter }}
-        </div>
-      </mat-list-item>
-
-      <mat-list-item class="statistics__item">
-        <div class="statistic__icon likes"></div>
-
-        <div class="statistic__counter">
-          {{item.statistics.likeCount | counter }}
-        </div>
-      </mat-list-item>
-
-      <mat-list-item class="statistics__item">
-        <div class="statistic__icon dislikes"></div>
-
-        <div class="statistic__counter">
-          {{item.statistics.dislikeCount | counter }}
-        </div>
-      </mat-list-item>
-
-      <mat-list-item class="statistics__item">
-        <div class="statistic__icon comments"></div>
-
-        <div class="statistic__counter">
-          {{item.statistics.commentCount | counter }}
-        </div>
-
-      </mat-list-item>
-    </mat-list>
-  </mat-card-title-group>
+  <app-statistics-folder
+    [statistics]="item.statistics">
+  </app-statistics-folder>
 
   <mat-card-title>
     {{item.snippet.title}}

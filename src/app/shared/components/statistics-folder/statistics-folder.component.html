@@ -1,0 +1,35 @@
+<mat-list class="statistics">
+
+  <mat-list-item class="statistics__item">
+    <div class="statistic__icon views"></div>
+
+    <div class="statistic__counter">
+      {{statistics.viewCount | counter }}
+    </div>
+  </mat-list-item>
+
+  <mat-list-item class="statistics__item">
+    <div class="statistic__icon likes"></div>
+
+    <div class="statistic__counter">
+      {{statistics.likeCount | counter }}
+    </div>
+  </mat-list-item>
+
+  <mat-list-item class="statistics__item">
+    <div class="statistic__icon dislikes"></div>
+
+    <div class="statistic__counter">
+      {{statistics.dislikeCount | counter }}
+    </div>
+  </mat-list-item>
+
+  <mat-list-item class="statistics__item">
+    <div class="statistic__icon comments"></div>
+
+    <div class="statistic__counter">
+      {{statistics.commentCount | counter }}
+    </div>
+
+  </mat-list-item>
+</mat-list>

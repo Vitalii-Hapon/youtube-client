@@ -19,6 +19,7 @@ import { MaterialsModule } from './core/modules/materials/materials.module';
 import { LoginPageComponent } from './core/pages/login-page/login-page.component';
 import { NotfoundPageComponent } from './core/pages/notfound-page/notfound-page.component';
 import { CounterPipe } from './shared/pipes/counter.pipe';
+import { StatisticsFolderComponent } from './shared/components/statistics-folder/statistics-folder.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CounterPipe } from './shared/pipes/counter.pipe';
     CardColorDirective,
     LoginPageComponent,
     NotfoundPageComponent,
-    CounterPipe
+    CounterPipe,
+    StatisticsFolderComponent
   ],
   imports: [
     BrowserModule,

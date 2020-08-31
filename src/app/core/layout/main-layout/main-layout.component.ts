@@ -6,7 +6,6 @@ import {Component, OnInit, Output} from '@angular/core';
              styleUrls: ['./main-layout.component.scss']
            })
 export class MainLayoutComponent implements OnInit {
-@Output() public list: string = '111';
   constructor() {
   }
 

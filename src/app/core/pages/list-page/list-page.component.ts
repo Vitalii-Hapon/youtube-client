@@ -8,7 +8,6 @@ import {Iitem} from '../../../shared/models/item';
              styleUrls: ['./list-page.component.scss']
            })
 export class ListPageComponent implements OnInit {
-  @Input() public list: string;
   public items: Iitem[] = [];
 
   constructor(private itemsService: ItemsService) {
@@ -16,7 +15,6 @@ export class ListPageComponent implements OnInit {
 
   public ngOnInit(): void {
     this.items = this.itemsService.getItems();
-    console.log(this.list);
-  }
+    }
 
 }

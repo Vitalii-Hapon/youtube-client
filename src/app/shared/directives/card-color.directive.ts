@@ -17,7 +17,7 @@ export class CardColorDirective implements OnInit {
       case this.datePeriod < 31 :
         this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-green)';
         break;
-      case this.datePeriod < 183 :
+      case this.datePeriod < 182 :
         this.elementRef.nativeElement.style.backgroundColor = 'var(--primary-yellow)';
         break;
       default:
