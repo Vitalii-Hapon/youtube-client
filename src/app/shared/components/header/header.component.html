@@ -8,9 +8,14 @@
     <div class="search__wrapper">
       <input type="text"
              placeholder="What are you want to find out?"
-             class="search__input">
+             class="search__input"
+             [formControl]="lookingValue"
+             (submit)="pushQuery(lookingValue.value)">
 
-      <button class="background--blue search__btn">
+      <button type="submit"
+              class="background--blue search__btn"
+              (click)="pushQuery(lookingValue.value)"
+              [disabled]="lookingValue.invalid">
         search
       </button>
     </div>
@@ -70,7 +75,8 @@
 
         <input type="text"
                placeholder="filter"
-               class="filter__input">
+               class="filter__input"
+               [formControl]="filterValue">
       </mat-list-item>
     </mat-list>
   </nav>

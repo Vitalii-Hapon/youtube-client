@@ -8,18 +8,21 @@ import { CreateItemPageComponent } from './core/pages/create-item-page/create-it
 import { EditItemPageComponent } from './core/pages/edit-item-page/edit-item-page.component';
 import { ItemPageComponent } from './core/pages/item-page/item-page.component';
 import { ListPageComponent } from './core/pages/list-page/list-page.component';
-import { SearchPipe } from './shared/pipes/search.pipe';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ItemCardComponent } from './shared/components/item-card/item-card.component';
 import { CardFormComponent } from './shared/components/card-form/card-form.component';
 import { RegistrationPageComponent } from './core/pages/registration-page/registration-page.component';
-import { CardColorDirective } from './shared/directives/card-color.directive';
+import { BorderBottomColorDirective } from './shared/directives/border-bottom-color.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './core/modules/materials/materials.module';
 import { LoginPageComponent } from './core/pages/login-page/login-page.component';
 import { NotfoundPageComponent } from './core/pages/notfound-page/notfound-page.component';
-import { CounterPipe } from './shared/pipes/counter.pipe';
+import { RoundCountPipe } from './shared/pipes/round-count.pipe';
 import { StatisticsFolderComponent } from './shared/components/statistics-folder/statistics-folder.component';
+import { BoxShadowColorDirective } from './shared/directives/box-shadow-color.directive';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SortingPipe } from './shared/pipes/sorting.pipe';
 
 @NgModule({
   declarations: [
@@ -33,18 +36,21 @@ import { StatisticsFolderComponent } from './shared/components/statistics-folder
     HeaderComponent,
     ItemCardComponent,
     CardFormComponent,
-    SearchPipe,
-    CardColorDirective,
+    FilterPipe,
+    BorderBottomColorDirective,
     LoginPageComponent,
     NotfoundPageComponent,
-    CounterPipe,
-    StatisticsFolderComponent
+    RoundCountPipe,
+    StatisticsFolderComponent,
+    BoxShadowColorDirective,
+    SortingPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialsModule
+    MaterialsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,12 +6,10 @@
 }
 
 .mat-card {
-  border-top-left-radius: 0;
   border: 0;
   display: flex;
   padding: 0;
   width: auto;
-  box-shadow: 8px 8px 12px -4px rgba(47, 128, 237,0.75);
 }
 
 .back-btn {
@@ -25,9 +23,7 @@
   justify-content: center;
   outline: none;
   border: none;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  margin-top: 2.755rem;
+  border-radius: 5px 0 0 5px;
 
   &:hover {
     background-color: var(--light-blue);
@@ -43,22 +39,26 @@
 .mat-card-image {
   width: 45.625rem;
   margin: 0!important;
+  border-bottom-left-radius: 5px;
 }
 
 .mat-card-content {
   padding: 2.25rem 2.25rem 2.25rem 2.25rem;
   width: 27.25rem;
   box-sizing: border-box;
+  border-bottom: 5px solid;
+  border-radius: 0 5px 5px 0;
 }
 
 .mat-card-header {
-  margin-bottom: 2.25rem;
   align-items: end;
 
   .mat-card-title {
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: bold;
+    height: 3.45rem;
+    overflow: hidden;
   }
 
   .mat-card-subtitle {
@@ -69,10 +69,13 @@
   }
 }
 
+.mat-card-title:not(:first-child), .mat-card-subtitle:not(:first-child) {
+margin: 0.875rem 0 4px 0;
+}
+
 .mat-card-title {
   font-size: 0.875rem;
   line-height: 1rem;
-  margin: 0 0 4px 0;
 }
 
 p {
@@ -82,11 +85,5 @@ p {
   color: var(--text-gray);
   height: 17.5rem;
   margin: 0;
-}
-
-.footer-line {
-  height: 5px;
-  width: 27.25rem;
-  margin: 1.25rem -2.25rem -0.9375rem -2.25rem;
-  border-bottom-right-radius: 5px;
+  overflow: hidden;
 }

@@ -1,36 +1,33 @@
-<mat-card class="background--grey">
+<mat-card class="background--grey" [BoxShadowColor]="item.snippet.publishedAt">
 
   <button class="back-btn" routerLink="/">
     <span class="back-btn__icon"></span>
   </button>
 
-  <img mat-card-image>
+  <img mat-card-image
+       [src]="item.snippet.thumbnails.medium.url">
 
-  <mat-card-content>
+  <mat-card-content [BorderBottomColor]='item.snippet.publishedAt'>
     <mat-card-header>
       <mat-card-title>
-        title
+        {{item.snippet.title}}
       </mat-card-title>
 
       <mat-card-subtitle>
-        date
+        {{publishedDate | date: 'fullDate'}}
       </mat-card-subtitle>
     </mat-card-header>
 
 
-    <mat-card-title>Description:</mat-card-title>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium ad aperiam blanditiis
-      cupiditate debitis deleniti dignissimos dolores doloribus ea est excepturi facilis illo in incidunt itaque iure
-      laboriosam libero modi molestias mollitia obcaecati pariatur quam quasi quia quis repudiandae sapiente sunt,
-      tempora temporibus ut voluptate voluptatem. Minus, neque.</p>
+    <mat-card-title>Description</mat-card-title>
+    <p>{{item.snippet.description}}</p>
 
 
     <mat-card-footer>
-      <app-statistics-folder>
+      <app-statistics-folder
+        [statistics]="item.statistics">
       </app-statistics-folder>
     </mat-card-footer>
 
-    <mat-card-footer class="background--blue footer-line">
-    </mat-card-footer>
   </mat-card-content>
 </mat-card>

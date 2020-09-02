@@ -1,4 +1,4 @@
-<mat-card class="background--grey">
+<mat-card class="background--grey" [BorderBottomColor]='item.snippet.publishedAt'>
 
   <img mat-card-image
        [src]="item.snippet.thumbnails.medium.url">
@@ -19,7 +19,4 @@
       </span>
     </button>
   </mat-card-actions>
-
-  <mat-card-footer class="footer-line" footerColor datePeriod="{{getPeriod()}}">
-  </mat-card-footer>
 </mat-card>

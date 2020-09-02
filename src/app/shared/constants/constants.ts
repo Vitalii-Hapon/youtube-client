@@ -1,0 +1,11 @@
+export const FIRST_SORT_DATE: number = 7;
+export const SECOND_SORT_DATE: number = 31;
+export const THIRD_SORT_DATE: number = 182;
+export const FIRST_BOTTOM_COLOR: string = 'var(--primary-blue)';
+export const FIRST_BOTTOM_COLOR_RGBA: string = 'rgba(47, 128, 237, 0.75)';
+export const SECOND_BOTTOM_COLOR: string = 'var(--primary-green)';
+export const SECOND_BOTTOM_COLOR_RGBA: string = 'rgba(39, 174, 96, 0.75)';
+export const THIRD_BOTTOM_COLOR: string = 'var(--primary-yellow)';
+export const THIRD_BOTTOM_COLOR_RGBA: string = 'rgba(242, 201, 76, 0.75)';
+export const OTHER_BOTTOM_COLOR: string = 'var(--red-color)';
+export const OTHER_BOTTOM_COLOR_RGBA: string = 'rgba(235, 87, 87, 0.75)';

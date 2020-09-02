@@ -3,8 +3,9 @@
 }
 
 .mat-card {
-  padding: 1.25rem 1.25rem 0.9375rem 1.25rem;
+  padding: 1.25rem 1.25rem 0.625rem 1.25rem;
   width: auto;
+  border-bottom: 5px solid;
 }
 
 img {
@@ -54,14 +55,5 @@ img {
   &:last-child {
     margin-bottom: 0 !important;
   }
-}
-
-.footer-line {
-  height: 5px;
-  width: 263px;
-  margin: 0.625rem -1.25rem -0.9375rem -1.25rem;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: var(--primary-blue);
 }
 

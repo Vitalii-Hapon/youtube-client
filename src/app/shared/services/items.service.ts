@@ -766,4 +766,8 @@ export class ItemsService {
   public getItems(): Iitem[] {
     return this.response.items;
   }
+
+  public getItemById(id: string): Iitem {
+    return this.response.items.find(item => item.id === id );
+  }
 }

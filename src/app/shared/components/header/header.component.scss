@@ -61,6 +61,11 @@
     box-shadow: none;
     background-color: var(--light-blue);
   }
+
+  &:disabled {
+    box-shadow: none;
+    background-color: var(--text-gray);
+  }
 }
 
 .settings__btn {

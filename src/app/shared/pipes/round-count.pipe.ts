@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'counter'
+  name: 'roundCount'
 })
-export class CounterPipe implements PipeTransform {
+export class RoundCountPipe implements PipeTransform {
 
   public transform(counter: string): string {
     function round(value: string, n: number): string {

@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Iitem} from '../../../shared/models/item';
+import {ActivatedRoute} from '@angular/router';
+import {ItemsService} from '../../../shared/services/items.service';
+import {HelperService} from '../../../shared/services/helper.service';
 
 @Component({
-  selector: 'app-item-page',
-  templateUrl: './item-page.component.html',
-  styleUrls: ['./item-page.component.scss']
-})
+             selector: 'app-item-page',
+             templateUrl: './item-page.component.html',
+             styleUrls: ['./item-page.component.scss']
+           })
 export class ItemPageComponent implements OnInit {
+  public item: Iitem;
+  public itemId: string;
+  public publishedDate: Date;
 
-  constructor() { }
+  constructor(private router: ActivatedRoute,
+              private itemService: ItemsService,
+              private helper: HelperService) {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.router.params.subscribe( value => this.itemId = value.id);
+    this.item = this.itemService.getItemById(this.itemId);
+    this.publishedDate = this.helper.toDate(this.item.snippet.publishedAt);
   }
 
 }

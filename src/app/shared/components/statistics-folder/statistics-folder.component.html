@@ -4,7 +4,7 @@
     <div class="statistic__icon views"></div>
 
     <div class="statistic__counter">
-      {{statistics.viewCount | counter }}
+      {{statistics.viewCount | roundCount }}
     </div>
   </mat-list-item>
 
@@ -12,7 +12,7 @@
     <div class="statistic__icon likes"></div>
 
     <div class="statistic__counter">
-      {{statistics.likeCount | counter }}
+      {{statistics.likeCount | roundCount }}
     </div>
   </mat-list-item>
 
@@ -20,7 +20,7 @@
     <div class="statistic__icon dislikes"></div>
 
     <div class="statistic__counter">
-      {{statistics.dislikeCount | counter }}
+      {{statistics.dislikeCount | roundCount}}
     </div>
   </mat-list-item>
 
@@ -28,7 +28,7 @@
     <div class="statistic__icon comments"></div>
 
     <div class="statistic__counter">
-      {{statistics.commentCount | counter }}
+      {{statistics.commentCount | roundCount }}
     </div>
 
   </mat-list-item>
