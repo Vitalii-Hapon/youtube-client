@@ -10,7 +10,7 @@ import {Subject} from 'rxjs';
              styleUrls: ['./header.component.scss']
            })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private viewsSorting: boolean = true;
+  private viewsSorting: boolean = null;
   private dateSorting: boolean = true;
   public settingsVisible: boolean = false;
   public lookingValue: FormControl = this.fb.control('', [Validators.required, Validators.minLength(4)]);
@@ -24,8 +24,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public ngOnInit(): void {
     this.filterValue.valueChanges
       .pipe(
-      takeUntil(this.ngUnsubscribe))
-      .subscribe( value => this.findingParams.filterValue.emit(value));
+        takeUntil(this.ngUnsubscribe))
+      .subscribe(value =>
+                   this.findingParams.filterValue.emit(value)
+      );
   }
 
   public toggleSettings(): void {
@@ -33,29 +35,45 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   public dateSortingState(): string {
-    if (this.dateSorting) {
-      return 'keyboard_arrow_down';
-    } else {
-      return 'keyboard_arrow_up';
+    switch (this.dateSorting) {
+      case true:
+        return 'keyboard_arrow_up';
+      case false:
+        return 'keyboard_arrow_down';
+      default:
+        return '';
     }
   }
 
   public changeDateSortingState(): void {
-    this.dateSorting = !this.dateSorting;
+    if (this.dateSorting === null) {
+      this.dateSorting = true;
+    } else {
+      this.dateSorting = !this.dateSorting;
+    }
     this.findingParams.sortByDate.emit(this.dateSorting);
+    this.viewsSorting = null;
   }
 
   public viewsSortingState(): string {
-    if (this.viewsSorting) {
-      return 'keyboard_arrow_down';
-    } else {
-      return 'keyboard_arrow_up';
+    switch (this.viewsSorting) {
+      case true:
+        return 'keyboard_arrow_up';
+      case false:
+        return 'keyboard_arrow_down';
+      default:
+        return '';
     }
   }
 
   public changeViewsSortingState(): void {
-    this.viewsSorting = !this.viewsSorting;
+    if (this.viewsSorting === null) {
+      this.viewsSorting = true;
+    } else {
+      this.viewsSorting = !this.viewsSorting;
+    }
     this.findingParams.sortByViews.emit(this.viewsSorting);
+    this.dateSorting = null;
   }
 
   public pushQuery(value: string): void {

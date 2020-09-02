@@ -11,7 +11,7 @@ import {FindingParamsService} from '../../../shared/services/finding-params.serv
 export class ListPageComponent implements OnInit {
   public items: Iitem[];
   public filterValue: string;
-
+  public sortParams: 'DateOnTop' | 'DateOnBottom' | 'ViewsOnTop' | 'ViewsOnBottom';
 
   constructor(private itemsService: ItemsService,
               private findingParams: FindingParamsService) {
@@ -31,10 +31,23 @@ export class ListPageComponent implements OnInit {
       }
     });
 
-    this.findingParams.filterValue.subscribe((value) => {
+    this.findingParams.filterValue.subscribe(value =>
+                                               this.filterValue = value
+    );
+
+    this.findingParams.sortByDate.subscribe(value => {
       if (value) {
-        this.filterValue = value;
-        console.log(this.filterValue);
+        this.sortParams = 'DateOnTop';
+      } else {
+        this.sortParams = 'DateOnBottom';
+      }
+    });
+
+    this.findingParams.sortByViews.subscribe(value => {
+      if (value) {
+        this.sortParams = 'ViewsOnTop';
+      } else {
+        this.sortParams = 'ViewsOnBottom';
       }
     });
   }

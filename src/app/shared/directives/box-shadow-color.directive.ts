@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Input, Renderer2} from '@angular/core';
+ import {Directive, ElementRef, Input, Renderer2} from '@angular/core';
 import {HelperService} from '../services/helper.service';
 import {
   FIRST_BOTTOM_COLOR_RGBA,

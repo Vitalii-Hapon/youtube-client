@@ -23,6 +23,7 @@ export class ItemPageComponent implements OnInit {
     this.router.params.subscribe( value => this.itemId = value.id);
     this.item = this.itemService.getItemById(this.itemId);
     this.publishedDate = this.helper.toDate(this.item.snippet.publishedAt);
+
   }
 
 }
