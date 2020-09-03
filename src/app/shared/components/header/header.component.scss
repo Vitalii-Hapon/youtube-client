@@ -103,6 +103,7 @@
   align-items: center;
   color: var(--text-dark-gray);
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 .user__ava {
@@ -112,6 +113,16 @@
   border-radius: 2.7px;
   margin-left: 0.5rem;
 
+}
+
+.login-btn {
+  height: 2rem;
+  margin-left: 1rem;
+
+  &:disabled {
+    box-shadow: none;
+    background-color: var(--text-gray);
+  }
 }
 
 .toolbar__bottom {

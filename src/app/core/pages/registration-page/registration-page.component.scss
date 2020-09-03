@@ -27,29 +27,37 @@
 .authorization-label {
   font-size: 0.625rem;
   line-height: 0.75rem;
+  padding-left: 0.4rem;
   color: var(--text-gray);
 }
 
 .authorization-input {
   height: 1.875rem;
+  margin-top: 0.4rem;
   background-color: var(--dark-grey);
+  padding-left: 0.4rem;
+  box-sizing: border-box;
+
 }
 
 .input-footer {
   height: 5px;
-  background-color: var(--dark-grey);
+  border-radius: 0 0 5px 5px;
+  background-color: var(--red-color)
 }
 
-.authorization-label:hover + .input-footer {
-  border-radius: 0 0 5px 5px;
-  background-color: var(--red-color);
-}
+//.authorization-label:hover + .input-footer {
+//  border-radius: 0 0 5px 5px;
+//  background-color: var(--red-color);
+//}
 
 .form-actions {
+
   display: flex;
   align-items: center;
   margin-left: auto;
   margin-top: 0.875rem;
+  justify-content: flex-end;
 
 
   .form-actions__link {
@@ -75,6 +83,10 @@
 
     &:active {
       background-color: var(--light-blue);
+    }
+
+    &:disabled {
+      background-color: var(--text-gray);
     }
   }
 }

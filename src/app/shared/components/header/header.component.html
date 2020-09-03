@@ -29,9 +29,21 @@
 
 <div class="user-block">
   <div class="user__name">
-    user
+    {{getUserName()}}
   </div>
-  <div class="user__ava"></div>
+  <button mat-button
+          class="background--blue login-btn"
+          routerLink="login"
+          [disabled]="authStatus">
+    login
+  </button>
+
+  <button mat-button
+          class="background--blue login-btn"
+          (click)="logout()"
+          [disabled]="!authStatus">
+    logout
+  </button>
 </div>
 
 <mat-toolbar class="background--grey toolbar__bottom"

@@ -21,7 +21,7 @@ import { NotfoundPageComponent } from './core/pages/notfound-page/notfound-page.
 import { RoundCountPipe } from './shared/pipes/round-count.pipe';
 import { StatisticsFolderComponent } from './shared/components/statistics-folder/statistics-folder.component';
 import { BoxShadowColorDirective } from './shared/directives/box-shadow-color.directive';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SortingPipe } from './shared/pipes/sorting.pipe';
 
 @NgModule({
@@ -50,7 +50,7 @@ import { SortingPipe } from './shared/pipes/sorting.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

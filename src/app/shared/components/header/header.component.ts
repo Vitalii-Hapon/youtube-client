@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {FindingParamsService} from '../../services/finding-params.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
              selector: 'app-header',
@@ -16,9 +17,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public lookingValue: FormControl = this.fb.control('', [Validators.required, Validators.minLength(4)]);
   public filterValue: FormControl = this.fb.control('', Validators.required);
   public ngUnsubscribe: Subject<void> = new Subject();
+  public authStatus: boolean;
 
   constructor(private fb: FormBuilder,
-              private findingParams: FindingParamsService) {
+              private findingParams: FindingParamsService,
+              private authService: AuthService) {
   }
 
   public ngOnInit(): void {
@@ -27,6 +30,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.ngUnsubscribe))
       .subscribe(value =>
                    this.findingParams.filterValue.emit(value)
+      );
+
+    this.authService.isAuthorized
+      .pipe(
+        takeUntil(this.ngUnsubscribe))
+      .subscribe(
+        authStatus => this.authStatus = authStatus
       );
   }
 
@@ -83,5 +93,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public ngOnDestroy(): void {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.unsubscribe();
+  }
+
+  public logout(): void {
+    this.authService.Logout();
+  }
+
+  public getUserName(): string {
+    if (this.authStatus) {
+      return localStorage.getItem('userName');
+    } else {
+      return 'no user';
+    }
   }
 }
