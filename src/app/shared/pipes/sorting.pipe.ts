@@ -1,6 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {Iitem} from '../models/item';
-import {HelperService} from '../services/helper.service';
+import {HelperService} from '../../core/services/helper.service';
 
 @Pipe({
         name: 'sorting'

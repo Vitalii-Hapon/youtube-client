@@ -1,0 +1,41 @@
+<div class="authorization-wrapper background--secondary-grey" [formGroup]="userForm">
+
+  <p class="authorization-title">
+    Login
+  </p>
+
+  <mat-form-field class="authorization-form">
+    <label class="authorization-label">
+      login
+      <input matInput class="authorization-input"
+             formControlName="userLogin">
+    </label>
+
+    <div class="input-footer" *ngIf="userForm.controls['userLogin'].invalid"></div>
+  </mat-form-field>
+
+  <mat-form-field class="authorization-form">
+    <label class="authorization-label">
+      password
+      <input matInput class="authorization-input"
+             formControlName="userPassword">
+    </label>
+
+    <div class="input-footer" *ngIf="userForm.controls['userPassword'].invalid"></div>
+  </mat-form-field>
+
+  <div class="form-actions">
+    <a routerLink="/login/registration"
+       class="form-actions__link">
+      Registration
+    </a>
+
+    <button type="submit"
+            class="background--blue form-actions__button"
+            [disabled]="userForm.invalid"
+            (click)="login()">
+      Login
+    </button>
+  </div>
+</div>
+

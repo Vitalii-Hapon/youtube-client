@@ -1,0 +1,24 @@
+<mat-card class="background--grey" [BorderBottomColor]='item.snippet.publishedAt'>
+
+  <img mat-card-image
+       [src]="item.snippet.thumbnails.medium.url">
+
+  <app-statistics-folder
+    [statistics]="item.statistics">
+  </app-statistics-folder>
+
+  <mat-card-title>
+    {{item.snippet.title}}
+  </mat-card-title>
+
+  <mat-card-actions>
+    <!--<button-->
+    <button [routerLink]="['/results', item.id]"
+
+            class="background--blue">
+      <span>
+        more...
+      </span>
+    </button>
+  </mat-card-actions>
+</mat-card>

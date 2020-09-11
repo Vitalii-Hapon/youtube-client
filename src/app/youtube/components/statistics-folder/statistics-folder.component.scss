@@ -1,0 +1,33 @@
+.statistics {
+  display: flex !important;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 12.625rem;
+  padding: 1.3125rem 0.625rem !important;
+
+  .mat-list-item {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    height: auto !important;
+    width: auto!important;
+  }
+}
+
+.statistic__icon {
+  background-image: url("../../../../img/icons/css_sprites.png")
+}
+
+.statistic__counter {
+  margin-left: 0.1875rem;
+}
+
+@each $name, $w, $h, $x, $y in (views, 20px, 13px, -90px, -85px),
+  (likes, 15px, 13px, -150px, -79px),
+  (dislikes, 15px, 13px, -150px, -46px),
+  (comments, 13px, 13px, -10px, -129px) {
+  .#{$name} {
+    width: $w;
+    height: $h;
+    background-position: $x $y;
+  }
+}

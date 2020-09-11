@@ -5,8 +5,8 @@ import {
   SECOND_BOTTOM_COLOR,
   SECOND_SORT_DATE, THIRD_BOTTOM_COLOR,
   THIRD_SORT_DATE
-} from '../constants/constants';
-import {HelperService} from '../services/helper.service';
+} from '../../core/constants/constants';
+import {HelperService} from '../../core/services/helper.service';
 
 @Directive({
              selector: '[BorderBottomColor]'

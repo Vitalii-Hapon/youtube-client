@@ -1,13 +1,13 @@
  import {Directive, ElementRef, Input, Renderer2} from '@angular/core';
-import {HelperService} from '../services/helper.service';
+import {HelperService} from '../../core/services/helper.service';
 import {
   FIRST_BOTTOM_COLOR_RGBA,
   FIRST_SORT_DATE, OTHER_BOTTOM_COLOR_RGBA,
   SECOND_BOTTOM_COLOR_RGBA,
   SECOND_SORT_DATE, THIRD_BOTTOM_COLOR_RGBA, THIRD_SORT_DATE
-} from '../constants/constants';
+} from '../../core/constants/constants';
 
-@Directive({
+ @Directive({
              selector: '[BoxShadowColor]'
            })
 export class BoxShadowColorDirective {
